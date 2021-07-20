@@ -1,0 +1,55 @@
+* {
+  font-family: "Space Mono", monospace;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  background-color: #c5e4e7;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+/* header */
+header {
+  text-align: center;
+}
+/* main */
+.main {
+  max-width: 60%;
+  background: white;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 20px;
+}
+main section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.section-left {
+  gap: 2.2rem;
+}
+.bill-wrapper {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* height: fit-content; */
+  gap: 0.5rem;
+}
+.bill-error {
+  display: inline-block;
+}
+.bill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
