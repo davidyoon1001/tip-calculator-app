@@ -38,18 +38,68 @@ main section {
   gap: 2.2rem;
 }
 .bill-wrapper {
-  /* position: relative; */
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* height: fit-content; */
+  height: fit-content;
   gap: 0.5rem;
 }
 .bill-error {
   display: inline-block;
+  white-space: nowrap;
 }
 .bill-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.bill-header label {
+  font-size: 14px;
+  color: #5e7a7d;
+  font-weight: 700;
+}
+.bill-header .bill-error {
+  font-size: 14px;
+  color: #b47d6e;
+  font-weight: 700;
+  display: none;
+}
+.bill-wrapper input {
+  cursor: text;
+  padding: 0.3rem 0.7rem;
+  text-align: right;
+  background: #f4fafa;
+  color: #00494d;
+  font: arial;
+  font-weight: 700;
+}
+.bill-wrapper input::-webkit-outer-spin-button,
+.bill-wrapper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.bill-wrapper img {
+  position: absolute;
+  top: 60%;
+  left: 5%;
+}
+
+input:hover,
+.bill-wrapper input:focus,
+.bill-wrapper input:focus-visible,
+.bill-wrapper input:focus-within,
+.bill-wrapper input:active {
+  outline: 4px auto #26c0ab;
+}
+
+.tip-select {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tip-select label {
+  font-size: 14px;
+  color: #5e7a7d;
+  font-weight: 700;
 }
