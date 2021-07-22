@@ -22,7 +22,7 @@
   </header>
   <main class="main">
     <section class="section-left">
-      <div class="bill-wrapper">
+      <div class="input-contain">
         <div class="bill-header">
           <label>Bill</label>
           <div class="bill-error">
@@ -55,11 +55,18 @@
             <input type="radio" name="option" id="option5" value="50">
             <label>50%</label>
           </div>
-            <input id="tip-custom" type="number" inputmode="numeric"  placeholder="Custom">
+          <input id="tip-custom" type="number" inputmode="numeric"  placeholder="Custom">
         </div>
       </div>
-      <div>
-
+      <div class="input-contain">
+        <div class="bill-header">
+          <label>Number of People</label>
+          <div class="bill-error">
+            Can't be zero
+          </div>
+        </div>
+        <input id="ppl-number" type="number" placeholder="0" min="0"></input>
+        <img src="./images/icon-person.svg" alt="person_icon">
       </div>
     </section>
     <section>

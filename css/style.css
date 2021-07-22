@@ -1,6 +1,8 @@
+:root {
+  --font-size: 24px;
+}
 * {
   font-family: "Space Mono", monospace;
-  font-size: 24px;
 }
 body {
   width: 100%;
@@ -27,6 +29,7 @@ header {
   gap: 2rem;
   padding: 2rem;
   border-radius: 20px;
+  box-shadow: 0px 0px 20px rgb(133 133 133 / 52%);
 }
 main section {
   width: 50%;
@@ -38,7 +41,7 @@ main section {
 .section-left {
   gap: 2.2rem;
 }
-.bill-wrapper {
+.input-contain {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -66,7 +69,8 @@ main section {
   font-weight: 700;
   display: none;
 }
-.bill-wrapper input {
+.input-contain input {
+  border: none;
   cursor: text;
   padding: 0.3rem 0.7rem;
   text-align: right;
@@ -79,7 +83,7 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-.bill-wrapper img {
+.input-contain img {
   position: absolute;
   top: 60%;
   left: 5%;
@@ -159,7 +163,22 @@ input:active {
   font-size: var(--font-size);
   font-weight: 700;
 }
-.option input[type="radio"]:checked + label {
+.options input[type="radio"]:checked + label {
   color: #00494d;
   background: #26c0ab;
+}
+.options input[type="radio"]:hover + label,
+.options input[type="radio"]:focus + label,
+.options input[type="radio"]:focus-visible + label,
+.options input[type="radio"]:focus-within + label,
+.options input[type="radio"]:active + label {
+  color: #00494d;
+  background: #a1e8e0;
+}
+.options input:hover,
+.options input:focus,
+.options input:focus-visible,
+.options input:focus-within,
+.options input:active {
+  outline: 4px auto #26c0ab;
 }
