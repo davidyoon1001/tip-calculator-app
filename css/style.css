@@ -1,5 +1,6 @@
 * {
   font-family: "Space Mono", monospace;
+  font-size: 24px;
 }
 body {
   width: 100%;
@@ -74,8 +75,8 @@ main section {
   font: arial;
   font-weight: 700;
 }
-.bill-wrapper input::-webkit-outer-spin-button,
-.bill-wrapper input::-webkit-inner-spin-button {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 .bill-wrapper img {
@@ -85,10 +86,10 @@ main section {
 }
 
 input:hover,
-.bill-wrapper input:focus,
-.bill-wrapper input:focus-visible,
-.bill-wrapper input:focus-within,
-.bill-wrapper input:active {
+input:focus,
+input:focus-visible,
+input:focus-within,
+input:active {
   outline: 4px auto #26c0ab;
 }
 
@@ -102,4 +103,63 @@ input:hover,
   font-size: 14px;
   color: #5e7a7d;
   font-weight: 700;
+}
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+.options .option {
+  border-radius: 5px;
+  overflow: hidden;
+}
+.options div,
+.options input {
+  width: 30%;
+  font-size: var(--font-size);
+  font-weight: 700;
+}
+.options input {
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem 0.7rem;
+  text-align: right;
+  background: #f4fafa;
+  color: #00494d;
+}
+.option input[type="radio"] {
+  border: none;
+  width: 0px;
+  opacity: 0;
+  outline: none;
+  position: fixed;
+}
+.options .option label {
+  display: inline-block;
+  font-size: var(--font-size);
+  padding: 0.3rem 0.7rem;
+  color: #f4fafa;
+  background: #00494d;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+}
+.options input {
+  border: none;
+  cursor: text;
+  padding: 0.3rem 0.7rem;
+  text-align: right;
+  background: #f4fafa;
+  color: #00494d;
+  border-radius: 5px;
+  width: 30%;
+  font-size: var(--font-size);
+  font-weight: 700;
+}
+.option input[type="radio"]:checked + label {
+  color: #00494d;
+  background: #26c0ab;
 }

@@ -29,11 +29,34 @@
             Can't be zero
           </div>
         </div>
-        <input type="number" placeholder="0" min="0">
+        <input type="number" inputmode="numeric" placeholder="0" min="0">
         <img src="./images/icon-dollar.svg" alt="dollar icon">
       </div>
       <div class="tip-select">
         <label>Select Tip %</label>
+        <div class="options">
+          <div class="option">
+            <input type="radio" name="option" id="option1" value="5" >
+            <label>5%</label>
+          </div>
+          <div class="option"> 
+            <input type="radio" name="option" id="option2" value="10">
+            <label>10%</label>
+          </div>
+          <div class="option"> 
+            <input type="radio" name="option" id="option3" value="15">
+            <label>15%</label>
+          </div>
+          <div class="option"> 
+            <input type="radio" name="option" id="option4" value="25">
+            <label>25%</label>
+          </div>
+          <div class="option"> 
+            <input type="radio" name="option" id="option5" value="50">
+            <label>50%</label>
+          </div>
+            <input id="tip-custom" type="number" inputmode="numeric"  placeholder="Custom">
+        </div>
       </div>
       <div>
 
