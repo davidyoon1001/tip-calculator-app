@@ -182,3 +182,57 @@ input:active {
 .options input:active {
   outline: 4px auto #26c0ab;
 }
+
+.section-right {
+  padding: 3rem 2rem;
+  background: #00494d;
+  border-radius: 1rem;
+}
+
+.section-right .result-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 6.8rem;
+}
+
+.result-wrapper .results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 2.5rem;
+}
+.results .result {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.results .result label {
+  color: white;
+}
+.results .result label p {
+  color: #7f9c9f;
+  font-weight: 700;
+}
+.results .result div {
+  font-size: calc(var(--font-size) * 2);
+  font-weight: 700;
+  color: #26c0ab;
+}
+.section-right .result-wrapper button {
+  width: 100%;
+  padding: 0.5rem;
+  background: #26c0ab;
+  font-size: var(--font-size);
+  color: #00494d;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
