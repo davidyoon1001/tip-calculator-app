@@ -29,33 +29,28 @@
             Can't be zero
           </div>
         </div>
-        <input type="number" inputmode="numeric" placeholder="0" min="0">
+        <input id="bill" type="number" inputmode="numeric" placeholder="0" min="0">
         <img src="./images/icon-dollar.svg" alt="dollar icon">
       </div>
       <div class="tip-select">
         <label>Select Tip %</label>
         <div class="options">
           <div class="option">
-            <input type="radio" name="option" id="option1" value="5" >
-            <label>5%</label>
+            <input type="button" name="option" id="option1" value="5%" onclick="calculate()">
           </div>
           <div class="option"> 
-            <input type="radio" name="option" id="option2" value="10">
-            <label>10%</label>
+            <input type="button" name="option" id="option2" value="10%" onclick="calculate()">
           </div>
           <div class="option"> 
-            <input type="radio" name="option" id="option3" value="15">
-            <label>15%</label>
+            <input type="button" name="option" id="option3" value="15%" onclick="calculate()">
           </div>
           <div class="option"> 
-            <input type="radio" name="option" id="option4" value="25">
-            <label>25%</label>
+            <input type="button" name="option" id="option4" value="25%" onclick="calculate()">
           </div>
           <div class="option"> 
-            <input type="radio" name="option" id="option5" value="50">
-            <label>50%</label>
+            <input type="button" name="option" id="option5" value="50%" onclick="calculate()">
           </div>
-          <input id="tip-custom" type="number" inputmode="numeric"  placeholder="Custom">
+          <input id="custom_tip" type="number" inputmode="numeric"  placeholder="Custom">
         </div>
       </div>
       <div class="input-contain">
@@ -65,7 +60,7 @@
             Can't be zero
           </div>
         </div>
-        <input id="ppl-number" type="number" placeholder="0" min="0"></input>
+        <input id="ppl_number" type="number" placeholder="1" min="1"></input>
         <img src="./images/icon-person.svg" alt="person_icon">
       </div>
     </section>
@@ -77,10 +72,10 @@
               <h4>Tip Amount</h4>
               <p>/ person</p>
             </label>
-            <div id="tip-per-person">$0.00</div>
+            <div id="tip_per_person">$0.00</div>
           </div>
           <div class="result">
-            <label for="total_per_person">
+            <label for="total-per-person">
               <h4>Total</h4>
               <p>/ person</p>
             </label>
@@ -96,6 +91,6 @@
     Coded by <a href="http://davidyoon.in/" target="_blank">David Yoon</a>.
   </div>
   
-
+  <script src="./js/index.js"></script>
 </body>
 </html>
