@@ -2,20 +2,33 @@ let bill, tip, ppl_num;
 
 let bill_input = document.getElementById("bill");
 let tip_input = document.getElementById("custom_tip");
-let tip_options = document.querySelector(".options").querySelectorAll("Label");
+let tip_options = document.querySelector(".options").querySelectorAll("input");
 let ppl_input = document.getElementById("ppl_number");
 let reset_btn = document.querySelector("button");
 let tip_result = document.getElementById("tip_per_person");
 let total_result = document.getElementById("total_per_person");
 
-
 function calculate(){
     let total;
-    console.log(this.total_result);
-    // total = Math.round((bill_input.value * ((this).value)/ppl_input.value);
+    let tip_amount;
+    total = Math.round(bill_input.value/ppl_input.value);
     total_result.innerText =  `$${total}`;
-    console.log(bill_input.value);
-
-    console.log(ppl_input.value);
-    console.log(total);
+    
 }
+
+function testfunction(index){
+    console.log(index.value);
+}
+
+tip_options.forEach((elem)=>{
+    elem.addEventListener("click", function(){
+        console.log(document.getElementById(elem.getAttribute("id")).name);
+        custontip = document.getElementById(elem.getAttribute("id")).value;
+        console.log(custontip);
+    })
+})
+[bill_input, ppl_input].map((elem)=>{
+    elem.addEventListener("change", function(){
+       console.log(elem.value);
+    })
+})
