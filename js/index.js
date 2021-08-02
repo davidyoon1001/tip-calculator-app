@@ -11,8 +11,8 @@ let total_result = document.getElementById("total_per_person");
 
 function calculate(){
     let total;
-    
-    total = Math.round(bill_input.value/ppl_input.value);
+    console.log(this.total_result);
+    // total = Math.round((bill_input.value * ((this).value)/ppl_input.value);
     total_result.innerText =  `$${total}`;
     console.log(bill_input.value);
 

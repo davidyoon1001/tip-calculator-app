@@ -135,6 +135,14 @@ input:active {
   font-weight: 700;
   text-align: center;
 }
+.option input[type="button"]:active,
+.option input[type="button"]:focus,
+.option input[type="button"]:focus-visible,
+.option input[type="button"]:focus-within {
+  background: #26c0ab;
+  color: #00494d;
+  outline: none;
+}
 .options input {
   border: none;
   cursor: text;
