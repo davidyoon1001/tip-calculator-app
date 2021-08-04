@@ -8,27 +8,36 @@ let reset_btn = document.querySelector("button");
 let tip_result = document.getElementById("tip_per_person");
 let total_result = document.getElementById("total_per_person");
 
-function calculate(){
+function calculate(bill, tip, ppl){
     let total;
     let tip_amount;
-    total = Math.round(bill_input.value/ppl_input.value);
+    tip_amount = roundToTwo((bill / ppl_input.value) * (tip / 100));
+    total = roundToTwo((bill_input.value/ppl_input.value) + tip_amount);
     total_result.innerText =  `$${total}`;
-    
+    tip_result.innerText = `$${tip_amount}`;
+
 }
 
-function testfunction(index){
-    console.log(index.value);
+function roundToTwo(num){
+    return +(Math.round(num + "e+2") + "e-2");
 }
+
+[bill_input, ppl_input].map(function(elem){
+    elem.addEventListener("change", function(){
+        console.log("triggered");
+        if(elem.value < 1){
+            elem.parentElement.children[0].children[1].style.display = "inline-block";
+        }
+    })
+})
 
 tip_options.forEach((elem)=>{
     elem.addEventListener("click", function(){
-        console.log(document.getElementById(elem.getAttribute("id")).name);
-        custontip = document.getElementById(elem.getAttribute("id")).value;
-        console.log(custontip);
+        let tip_opt = document.getElementById(elem.getAttribute("id")).name;
+        calculate(bill_input.value, tip_opt, ppl_input.value);
     })
 })
-[bill_input, ppl_input].map((elem)=>{
-    elem.addEventListener("change", function(){
-       console.log(elem.value);
-    })
+
+tip_input.addEventListener("change", function(){
+    calculate(bill_input.value, tip_input.value, ppl_input.value);
 })
