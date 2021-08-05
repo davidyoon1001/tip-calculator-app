@@ -207,6 +207,10 @@ input:active {
   border-radius: 8px;
   cursor: pointer;
 }
+.section-right .result-wrapper button:disabled {
+  cursor: default;
+  opacity: 0.1;
+}
 @media all and (max-width: 1050px) {
   body {
     height: auto;
