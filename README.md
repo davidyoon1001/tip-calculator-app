@@ -4,8 +4,6 @@
 
 ---
 
-Thanks for checking out this front-end coding challenge.
-
 Led by [Frontend Mentor](https://www.frontendmentor.io) challenges to help improve coding skills by building realistic projects.
 
 **To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
